@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 import pickle
 import numpy as np
 import json
@@ -19,7 +19,7 @@ def __process_input(request_data: str) -> np.array:
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    return redirect("https://github.com/arnoldasjan/turing_235")
 
 
 @app.route('/predict', methods=['POST'])
